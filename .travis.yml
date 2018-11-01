@@ -4,6 +4,16 @@ install: true
 
 dist: trusty
 
+deploy:
+  provider: heroku
+  app: mylabboy
+  on:
+    branch:
+    - develop
+  api_key:
+    secure: $HEROKU_API_KEY
+
+
 jdk:
 - oraclejdk8
 
@@ -28,4 +38,4 @@ script:
 - ./gradlew assemble
 - ./gradlew check --rerun-tasks
 
-deploy: provider: heroku app: heroku4j1 on: branch: - develop api_key: secure: $HEROKU_API_KEY
+
