@@ -6,7 +6,7 @@ dist: trusty
 
 deploy:
   provider: heroku
-  app: mylabboy
+  app: heroku4j1
   on:
     branch:
     - develop
